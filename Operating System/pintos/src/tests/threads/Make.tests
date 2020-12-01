@@ -1,0 +1,20 @@
+# -*- makefile -*-
+
+# CSU-version S19: Test names.
+tests/threads_TESTS = $(addprefix tests/threads/,alarm-single		\
+alarm-multiple alarm-simultaneous alarm-priority alarm-zero		\
+alarm-negative priority-change 						\
+priority-fifo priority-preempt priority-sema)		
+
+# Sources for tests.
+tests/threads_SRC  = tests/threads/tests.c
+tests/threads_SRC += tests/threads/alarm-wait.c
+tests/threads_SRC += tests/threads/alarm-simultaneous.c
+tests/threads_SRC += tests/threads/alarm-priority.c
+tests/threads_SRC += tests/threads/alarm-zero.c
+tests/threads_SRC += tests/threads/alarm-negative.c
+tests/threads_SRC += tests/threads/priority-change.c
+tests/threads_SRC += tests/threads/priority-fifo.c
+tests/threads_SRC += tests/threads/priority-preempt.c
+tests/threads_SRC += tests/threads/priority-sema.c
+tests/threads_SRC += tests/threads/prd-cns.c
